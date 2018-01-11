@@ -1,0 +1,50 @@
+@import '~config/_colors.scss';
+
+.playerMenu {
+	float: right;
+
+	.userHolder {
+		background: $key-lime-pie;
+		float: left;
+		font-weight: bold;
+		padding: 10px 30px;
+		position: relative;
+		text-transform: uppercase;
+
+		&:hover .accNav {
+			display: block;
+		}
+	}
+
+	.accNav {
+		background: $key-lime-pie;
+
+		display: none;
+		left: 0;
+		padding: 10px;
+		position: absolute;
+		top: 42px;
+		width: 280px;
+
+		a {
+			border-left: 1px solid $white;
+			color: $white;
+			float: left;
+			font-weight: bold;
+			padding: 0 10px;
+
+			&:last-child {
+				border-right: 1px solid $white;
+			}
+		}
+	}
+
+	.wallet {
+		background: $thunderbird;
+		float: left;
+		padding: 10px;
+		width: 215px;
+	}
+
+
+}

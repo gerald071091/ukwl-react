@@ -1,0 +1,24 @@
+@import '~config/_colors.scss';
+
+.containerBody {
+	width: 100%;
+	margin-bottom: 20px;
+
+	.formHeader {
+		background: $alizarin-crimson;
+		border-bottom: 2px solid $thunderbird;
+		font-family: 'Bold';
+		font-size: 18px;
+		letter-spacing: 1px;
+		padding: 5px 26px;
+		text-transform: uppercase;
+	}
+
+	.formBody {
+		background: $mine-shaft-2;
+		height: auto;
+		padding: 20px;
+		overflow: hidden;
+	}
+
+}

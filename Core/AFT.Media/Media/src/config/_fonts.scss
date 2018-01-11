@@ -1,0 +1,61 @@
+@font-face {
+	font-family: 'Regular';
+	src: url("../Content/fonts/brand/regular/Regular.eot?#iefix") format('embedded-opentype'),
+	url("../Content/fonts/brand/regular/Regular.woff") format('woff'),
+	url("../Content/fonts/brand/regular/Regular.ttf") format('truetype'),
+	url("../Content/fonts/brand/regular/Regular.svg#Regular") format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bold';
+	src: url("../Content/fonts/brand/bold/Bold.eot?#iefix") format('embedded-opentype'),
+	url("../Content/fonts/brand/bold/Bold.woff") format('woff'),
+	url("../Content/fonts/brand/bold/Bold.ttf") format('truetype'),
+	url("../Content/fonts/brand/bold/Bold.svg#Bold") format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Semibold';
+	src: url("../Content/fonts/brand/semibold/Semibold.eot?#iefix") format('embedded-opentype'),
+	url("../Content/fonts/brand/semibold/Semibold.woff") format('woff'),
+	url("../Content/fonts/brand/semibold/Semibold.ttf") format('truetype'),
+	url("../Content/fonts/brand/semibold/Semibold.svg#Semibold") format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../Content/fonts/fontawesome/fontawesome-webfont.eot?v=4.6.1');
+	src: url('../Content/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.6.1') format('embedded-opentype'),
+	url('../Content/fonts/fontawesome/fontawesome-webfont.woff2?v=4.6.1') format('woff2'),
+	url('../Content/fonts/fontawesome/fontawesome-webfont.woff?v=4.6.1') format('woff'),
+	url('../Content/fonts/fontawesome/fontawesome-webfont.ttf?v=4.6.1') format('truetype'),
+	url('../Content/fonts/fontawesome/fontawesome-webfont.svg?v=4.6.1#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'iconmoon';
+	src: url("../Content/fonts/icomoon/icomoon.eot?-yz94yw");
+	src: url("../Content/fonts/icomoon/icomoon.eot?#iefix-yz94yw") format("embedded-opentype"),
+	url("../Content/fonts/icomoon/icomoon.woff?-yz94yw") format("woff"),
+	url("../Content/fonts/icomoon/icomoon.ttf?-yz94yw") format("truetype"),
+	url("../Content/fonts/icomoon/icomoon.svg?-yz94yw#icomoon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Glyphicons Halflings';
+	src: url("../Content/fonts/glyphicons/glyphicons-halflings-regular.eot");
+	src: url("../Content/fonts/glyphicons/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),
+	url("../Content/fonts/glyphicons/glyphicons-halflings-regular.woff") format("woff"),
+	url("../Content/fonts/glyphicons/glyphicons-halflings-regular.ttf") format("truetype"),
+	url("../Content/fonts/glyphicons/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+}

@@ -1,0 +1,21 @@
+@import '~config/_colors.scss';
+
+.mainContent {
+  width: 1200px;
+  margin: 0 auto !important;
+  position: relative;
+}
+
+.rightContent {
+  background-color: $mine-shaft;
+  float: right !important;
+  min-height: 700px !important;
+  padding: 25px !important;
+}
+
+.sidebarContent {
+  min-height: 700px;
+  height: 100%;
+  padding: 0 !important;
+  position: absolute !important;
+}

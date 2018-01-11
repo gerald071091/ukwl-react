@@ -1,0 +1,42 @@
+@import '~config/_colors.scss';
+
+.realityCheckModal {
+  background: transparent !important;
+  border: none;
+}
+
+.realityCheckContent{
+  background: transparent !important;
+  border: none;
+
+  h3, div {
+    font-weight: bold;
+  }
+
+  button {
+    border: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    height: 40px;
+    margin-top: 10px;
+    opacity: 0.9;
+    width: 250px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .bEndSession {
+    background-color: $shuttle-gray;
+    margin-right: 10px;
+  }
+
+  .bContinue {
+    background-color: $smoky;
+  }
+
+}
+
+

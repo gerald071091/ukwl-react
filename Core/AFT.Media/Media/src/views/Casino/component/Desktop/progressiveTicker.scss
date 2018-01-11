@@ -1,0 +1,16 @@
+@import '~config/_colors.scss';
+
+.jackpotTicker {
+  background-color: $alizarin-crimson;
+  font-weight: bold;
+  height: 25px;
+  left: 0;
+  margin: 5px auto;
+  padding: 2px;
+  position: absolute;
+  top: 5px;
+  text-align: center;
+  right: 0;
+  width: 270px;
+  z-index: 1;
+}

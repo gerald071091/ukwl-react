@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <link href='@CMS.Media("Content/css/master.css")' rel="stylesheet" />
+    <link rel="shortcut icon" href='@CMS.Media("Content/images/_bvs/favicon.ico")' type="image/vnd.microsoft.icon" />
+    <link rel="icon" href='@CMS.Media("Content/images/_bvs/favicon.ico")' type="image/vnd.microsoft.icon" />
+    <!-- ADD STYLES (USE AFT.MEDIA) -->
+</head>
+<body>
+    <div id="app" />
+    <!-- ADD SCRIPTS (USE AFT.MEDIA) -->
+
+    <script>
+        @{
+            var culture = CMS.CultureCode;
+
+            var csrfToken = CMS.CSRFToken();
+            var hasReadTerms = HttpContext.Current.Request.Cookies["rTC"] != null ? HttpContext.Current.Request.Cookies["rTC"].Value : "True";
+
+        }
+        window.isMobile = @Json.Encode(@CMS.IsMobile);
+        window.cultureCode = 'en-gb';
+        window.hasReadTerms = '@hasReadTerms';
+        window.casinoApiMethod = window.isMobile == true ? 'mapi' : 'api';
+        window.apiMethod = 'api';
+        window.mobileResource = function(punctuation){
+            if(window.isMobile){
+                var resource = punctuation + 'mobile';
+                return resource;
+            }
+            return '';
+        };
+        window.mainPage = window.isMobile == true ? '/' + window.cultureCode + window.mobileResource('/') : '/' + window.cultureCode + '/';
+        //window.mainPage = '/' + window.cultureCode + '/mobile';
+        window.tncUrl = '/' + window.cultureCode + '/info/terms';
+        window.currentUrl = window.location.href;
+        window.hostUrl = window.location.protocol + '//' + window.location.host;
+        window.depositUrl = window.hostUrl + '/' + window.cultureCode + '/payment/deposit';
+        window.casinoUrl = window.hostUrl + '/' + window.cultureCode + window.mobileResource('/') +'/casino';
+        window.sportsbookUrl = '/' + window.cultureCode + window.mobileResource('/') + '/sportsbook';
+        window.skrillReturnUrlPrefix = window.hostUrl + '/' + window.cultureCode + window.mobileResource('/') ;
+        window.worldPayReturnUrlPrefix = window.hostUrl + '/' + window.cultureCode + window.mobileResource('/')  +'/Payment/WorldPay3DSecureCallback';
+        window.landingPageUrl = '/' + window.cultureCode + '/mobile/LandingPage';
+
+        window.csrfToken = '@csrfToken.Value';
+        window.csrfTokenName = '@csrfToken.Key';
+        window.sitePrefix = '@CMS.SitePrefix';
+        window.siteName = '@CMS.SiteName';
+        window.siteUrl = '@CMS.SiteUrl';
+        window.docsEmail = '@CMS.DocsEmail';
+        window.supportEmail = '@CMS.SupportEmail';
+
+        window.registeredNumber = '@CMS.RegisteredNumber';
+        window.registeredAddress = '@CMS.RegisteredAddress';
+        window.registeredCompany = '@CMS.RegisteredCompany';
+        window.registeredLocation = '@CMS.RegisteredLocation';
+
+        window.document.title = '@CMS.SiteName';
+
+        window.mediaRoot = '@CMS.Media("")';
+        window.cmsMedia = function(path) {
+            return (window.mediaRoot + path);
+        };
+
+        window.authed = @Json.Encode(@CMS.IsAuthenticated);
+             @if (CMS.IsAuthenticated){
+            <text>
+            window.username = '@CMS.Username';
+        if('@CMS.Currency' === 'USD') {
+                window.currencySymbol = '$'
+            }
+            else {
+                window.currencySymbol = ('@CMS.Currency' === 'GBP')? '£' : '€'; //'&pound;' : '&euro;';
+            }
+        </text>
+        }
+
+        </script>
+
+    <script src="@CMS.Media("Content/js/vendor.js")"></script>
+    <script src="@CMS.Media("Content/js/app.js")"></script>
+</body>
+
+</html>

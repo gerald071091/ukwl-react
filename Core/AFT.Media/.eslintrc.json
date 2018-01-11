@@ -1,0 +1,78 @@
+﻿{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "strict": 0,
+    "array-callback-return": 2,
+    "block-scoped-var": 2,
+    "consistent-return": 2,
+    "no-console": 0,
+    "curly": [2, "multi-line"],
+    "dot-location": [2, "property"],
+    "dot-notation": 2,
+    "eqeqeq": 2,
+    "no-case-declarations": 2,
+    "no-div-regex": 2,
+    "no-debugger": 1,
+    "no-mixed-spaces-and-tabs": 1,
+    "no-else-return": 2,
+    "no-fallthrough": [2, {"commentPattern": "break[\\s\\w]*omitted"}],
+    "no-floating-decimal": 2,
+    "no-global-assign": 2,
+    "no-implicit-coercion": 2,
+    "no-invalid-this": 2,
+    "no-lone-blocks": 2,
+    "no-loop-func": 2,
+    "no-multi-spaces": 2,
+    "no-multi-str": 2,
+    "no-new": 2,
+    "no-param-reassign": [1, {"props": false}],
+    "no-redeclare": [2, {"builtinGlobals": true}],
+    "no-self-compare": 2,
+    "no-useless-concat": 2,
+    "no-useless-escape": 2,
+    "no-useless-return": 2,
+    "vars-on-top": 2,
+    "wrap-iife": 2,
+    "guard-for-in": 0,
+    "no-alert": 1,
+    "no-empty-function": 1,
+    "no-magic-numbers": [1, {"ignoreArrayIndexes": true}],
+
+//    REACT RULES
+    "react/display-name": 0,
+    "react/no-did-update-set-state": 2,
+    "react/prefer-es6-class": 2,
+    "react/prefer-stateless-function": 1, //for the mean time
+    "react/require-render-return": 2,
+    "react/sort-comp": 2
+  },
+
+  "globals": {
+    "$": true,
+    "dataLayer": true,
+    "fpGetBlackbox":true,
+    "ioGetBlackbox" : true,
+    "ga": true,
+    "ua": true,
+    "abortAllAjaxRequests": true,
+    "arguments": true
+  }
+}
+

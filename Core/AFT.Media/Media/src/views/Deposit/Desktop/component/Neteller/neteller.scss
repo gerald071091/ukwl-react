@@ -1,0 +1,148 @@
+@import '~config/_colors.scss';
+
+.acctLogin {
+	background: $mine-shaft-2;
+	overflow: hidden;
+	padding:  25px;
+
+	.imgHolder {
+		float: left;
+		width: 415px;
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	.loginDesc {
+		float: left;
+		width: 385px;
+	}
+}
+
+.depositAmount {
+	input {
+		color: $black;
+		float: left;
+		height: 30px;
+	}
+
+	.depButton {
+		p {
+			float: left;
+			line-height: 25px;
+			width: 50px;
+		}
+
+		button {
+			background: $shakespeare;
+			border: none;
+			border-radius: 5px;
+			color: $black;
+			float: left;
+			font-weight: bold;
+			margin: 0 2px;
+			padding: 5px 10px;
+
+			&:hover {
+				background: $key-lime-pie;
+			}
+		}
+	}
+}
+
+.dpLimit {
+	margin-top: 10px;
+
+	span {
+		color: $thunderbird;
+	}
+}
+
+.checkboxHolder {
+	overflow: hidden;
+	margin-top: 10px;
+
+	.checkbox {
+		float: left;
+	}
+
+	.terms {
+		float: left;
+	}
+}
+
+.depositLimit {
+	overflow: hidden;
+}
+
+.netellerDetails {
+	background: $mine-shaft-2;
+	overflow: hidden;
+
+	h3 {
+		background: $alizarin-crimson;
+		color: $white;
+		font-size: 18px;
+		font-weight: bold;
+		margin-top: 0;
+		padding: 10px 15px;
+	}
+
+	.methodHolder {
+		margin-bottom: 20px;
+		overflow: hidden;
+		padding: 25px;
+	}
+
+	.AccountHolder {
+		overflow: hidden;
+
+		input {
+			color: $black;
+			float: left;
+			margin-right: 20px;
+			height: 30px;
+		}
+
+		.details {
+			overflow: hidden;
+		}
+	}
+}
+
+.depButton {
+	float: right;
+
+	button {
+		border: none;
+		border-radius: 5px;
+		color: $black;
+		float: left;
+		font-weight: bold;
+		margin: 0 10px;
+		padding: 5px 10px;
+
+		&:hover {
+			background: $key-lime-pie;
+		}
+	}
+	.backBtn {
+		background: $white;
+		border: none;
+		border-radius: 5px;
+		color: $black;
+		float: left;
+		font-weight: bold;
+		margin: 0 10px;
+		padding: 5px 10px;
+		text-align: center;
+		width: 125px;
+	}
+
+	.depositBtn {
+		background: $shakespeare;
+		width: 125px;
+	}
+}

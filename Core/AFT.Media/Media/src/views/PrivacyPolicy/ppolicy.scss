@@ -1,0 +1,15 @@
+@import '~config/_colors.scss';
+
+.privacyPolicyPage {
+	.policyDate {
+		text-align:right;
+		color: $alizarin-crimson;
+		font-size: 90%;
+	}
+
+	.boldUnder {
+		font-weight: bold;
+		margin-top: 30px;
+		text-decoration: underline
+	}
+}

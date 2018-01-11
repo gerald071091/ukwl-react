@@ -1,0 +1,168 @@
+@import 'config/_animation.scss';
+@import 'config/_colors.scss';
+@import 'config/_plugins.scss';
+@import 'config/_fonts.scss';
+
+:global {
+	body {
+		background: black;
+		color: #FFFFFF;
+		font-family: 'Regular';
+		font-size: 16px;
+		margin: 0;
+
+		a {
+			color: red;
+			cursor: pointer;
+			text-decoration: none !important;
+
+			&:hover {
+				color: $key-lime-pie;
+			}
+		}
+	}
+
+	.btn:hover, .btn:focus, .btn.focus {
+		color: $black;
+	}
+
+	.clear {
+		clear: both;
+	}
+
+	.display-none {
+		display: none;
+	}
+
+	.input-error {
+		background-color: $your-pink;
+	}
+
+	.input-msg-error {
+		color: $alizarin-crimson;
+	}
+
+	input[type="text"], input[type="email"], input[type="password"], select, textarea {
+		border-radius: 0 !important;
+		border: none;
+	}
+
+	input[type="radio"] {
+		height: auto !important;
+		width: auto !important;
+		display: inline-block !important;
+	}
+
+	input[type="radio"], input[type="checkbox"] {
+		margin-right: 10px;
+	}
+
+	label.disBlock {
+		display: block;
+	}
+
+	.input-valid {
+		background-color: $white;
+	}
+
+	.mainTitle {
+		font-size: 24px;
+		font-family: 'Bold';
+		//margin-top: 50px;
+		text-transform: uppercase;
+	}
+	
+	.no-overflow {
+		overflow: initial !important;
+	}
+
+	/** React Loaders */
+	.loader-hidden {
+		display: none;
+	}
+
+	.loader-active {
+		display: block;
+	}
+
+	.red {
+		color: $alizarin-crimson;
+	}
+
+	.tnc {
+		height: 490px;
+		overflow-y: scroll;
+	}
+
+	/*UTILS MODAL*/
+	#utilsModal {
+		align-items: center;
+
+		.utils-modal-content {
+			color: white;
+			margin: 0 auto;
+			max-height: 700px;
+			width: 500px;
+			padding: 15px !important;
+			text-align: center;
+			background: black;
+			border: 2px solid #ED2624;
+			overflow: hidden;
+		}
+
+		button {
+			height: 36px;
+			width: 90px;
+			margin: 10px 20px;
+		}
+
+		h1 {
+			background-color: $alizarin-crimson;
+			display: inline-block;
+			font-family: 'Bold';
+			font-size: 16px;
+			padding: 8px 25px;
+			position: relative;
+			text-transform: uppercase;
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 180px;
+		}
+	}
+
+	/**Casino Navigation */
+	.navListCategory {
+		.slick-list {
+			height: 40px;
+			margin: 0 auto;
+			width: 1100px !important;
+		}
+
+		.slick-arrows {
+			z-index: 1;
+		}
+
+		.slick-next {
+			right: 0px  !important;
+			top: 20px;
+		}
+
+		.slick-prev {
+			left: 0px !important;
+			top: 20px;
+		}
+	}
+
+	/**Sportsbook Slider */
+	.sportsbookBanner .slick-dots {
+		bottom: 5px;
+		z-index: 1;
+
+		li {
+			right: -500px;
+		}
+	}
+}

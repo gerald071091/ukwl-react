@@ -1,0 +1,45 @@
+@import '~config/_colors.scss';
+
+.menu {
+	background: $shark;
+	overflow: hidden;
+	padding: 25px 0;
+
+	> div {
+		margin: 0 auto;
+		width: 1200px;
+	}
+
+	img {
+		float: left;
+	}
+
+	ul {
+		float: right;
+		margin: 0;
+
+		li {
+			display: table-cell;
+		}
+
+		li:last-child a {
+			border-right: 1px solid $white;
+		}
+
+		a {
+			border-left: 1px solid $white;
+			display: block;
+			font-family: 'Bold';
+			font-size: 24px;
+			height: 65px;
+			padding: 10px 15px;
+			text-align: center;
+			text-transform: uppercase;
+			width: 300px;
+		}
+
+			&:hover {
+				color: white !important;
+			}
+	}
+}

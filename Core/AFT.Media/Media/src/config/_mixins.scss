@@ -1,0 +1,92 @@
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin appearance($arg) {
+  appearance: $arg;
+  -moz-appearance: $arg; /* Firefox */
+  -webkit-appearance: $arg; /* Safari and Chrome */
+}
+
+@mixin background-size($arg) {
+  -webkit-background-size: $arg;
+  -moz-background-size: $arg;
+  -o-background-size: $arg;
+  background-size: $arg;
+}
+
+@mixin box-shadow($args...) {
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+  -ms-box-shadow: $args;
+  -o-box-shadow: $args;
+  box-shadow: $args;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes :global(#{$animation-name}) {
+    @content;
+  }
+  @-moz-keyframes :global(#{$animation-name}) {
+    @content;
+  }
+  @-ms-keyframes :global(#{$animation-name}) {
+    @content;
+  }
+  @-o-keyframes :global(#{$animation-name}) {
+    @content;
+  }
+  @keyframes :global(#{$animation-name}) {
+    @content;
+  }
+}
+
+@mixin opacity($opacity) {
+  -khtml-opacity: $opacity;
+  -moz-opacity: $opacity;
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin whitespace(){
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  word-break: normal;
+}
+
+@mixin user-drag($arg) {
+  -moz-user-select: $arg;
+  -webkit-user-drag: $arg;
+  user-drag: $arg;
+}

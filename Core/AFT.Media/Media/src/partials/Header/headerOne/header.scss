@@ -1,0 +1,35 @@
+@import '~config/_colors.scss';
+
+.header {
+	margin: 0 auto;
+	width: 1200px;
+
+	.leftHeader {
+		float: left;
+		padding: 10px 0;
+		width: 500px;
+
+		> div {
+			float: left;
+		}
+
+		a {
+			color: $white;
+			font-family: 'Regular';
+			font-size: 16px;
+			margin: 0 10px;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:hover {
+				color: $alizarin-crimson;
+			}
+		}
+
+		span {
+			border-left: 1px solid $white;
+			height: 100px;
+			width: 1px;
+		}
+	}
+}

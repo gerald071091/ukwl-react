@@ -1,0 +1,32 @@
+/**
+ * Created by gian.jamisola on 6/13/2017.
+ */
+
+@import '~config/_colors.scss';
+
+.containerHeight {
+  height: 45px;
+}
+
+.header {
+  text-align: center;
+  background: black;
+  border-bottom: 2px solid $mine-shaft;
+}
+
+.img404 {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+
+.btnPosition {
+  position: absolute !important;
+  left: 0;
+  right: 0;
+}
+
+.adjustTop {
+  //position: relative;
+  //top: 5em;
+}

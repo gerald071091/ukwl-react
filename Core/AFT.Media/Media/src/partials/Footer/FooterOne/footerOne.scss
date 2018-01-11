@@ -1,0 +1,65 @@
+@import '~config/_colors.scss';
+
+.container {
+  background-color: $black;
+  width: 1200px;
+  margin: 0 auto;
+  height: 680px;
+}
+
+.footer {
+  color: $white;
+}
+
+.faEnvelope {
+  padding: 3px;
+  font-size: 18px;
+  color: red;
+}
+
+.payment, .vendors {
+  border-bottom: 1px solid $abbey;
+  clear: both !important;
+  padding: 22px 0;
+  margin: 0 auto;
+  text-align: center;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: inline;
+    padding: 0 10px;
+  }
+}
+
+.payment img {
+  padding: 0 50px;
+}
+
+.sitemap {
+  padding: 22px 0;
+
+  h4 {
+    color: red !important;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0 !important;
+
+  a {
+    color: $white !important;
+
+    &:hover {
+      color: $alizarin-crimson !important;
+    }
+  }
+}
+
+//#sitemapOne {
+//  height: 20px;
+//  background-color: pink;
+//}

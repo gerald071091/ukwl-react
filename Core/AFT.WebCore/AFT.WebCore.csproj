@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03AE9C93-8D69-4BA9-9259-A0183873B8ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AFT.WebCore</RootNamespace>
+    <AssemblyName>AFT.WebCore</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\QA\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Development|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Development\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Staging\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <OutputPath>bin\Production\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AFT.RegoApi.Proxy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AFT.RegoApi.Proxy.1.5.217\lib\net45\AFT.RegoApi.Proxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net1213, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Common.Logging.Log4Net1213.3.3.1\lib\net40\Common.Logging.Log4Net1213.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.Interception.4.0.1\lib\Net45\Microsoft.Practices.Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.Interception.4.0.1\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Mvc5, Version=1.2.3.0, Culture=neutral, PublicKeyToken=43da31bc42a85347, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.Mvc5.1.2.3\lib\net45\Unity.Mvc5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.WebApi, Version=5.2.3.0, Culture=neutral, PublicKeyToken=43da31bc42a85347, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.WebAPI.5.2.3\lib\net45\Unity.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebApi.OutputCache.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Strathweb.CacheOutput.WebApi2.0.10.0\lib\net45\WebApi.OutputCache.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebApi.OutputCache.V2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Strathweb.CacheOutput.WebApi2.0.10.0\lib\net45\WebApi.OutputCache.V2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\AccountController.cs" />
+    <Compile Include="Api\AnnouncementController.cs" />
+    <Compile Include="Api\ApiBase.cs" />
+    <Compile Include="Api\AuthenticationController.cs" />
+    <Compile Include="Api\CasinoController.cs" />
+    <Compile Include="Api\FinancialBettingController.cs" />
+    <Compile Include="Api\LiveCasinoController.cs" />
+    <Compile Include="Api\PaymentController.cs" />
+    <Compile Include="Api\PaymentController.Neteller.cs" />
+    <Compile Include="Api\PaymentController.Raven.cs" />
+    <Compile Include="Api\PaymentController.Skrill.cs" />
+    <Compile Include="Api\PaymentController.Ukash.cs" />
+    <Compile Include="Api\PaymentController.WorldPay.cs" />
+    <Compile Include="Api\PaymentValidator.cs" />
+    <Compile Include="Api\ProductController.cs" />
+    <Compile Include="Api\PromotionController.cs" />
+    <Compile Include="Api\RegistrationController.cs" />
+    <Compile Include="Api\SportsbookController.cs" />
+    <Compile Include="Api\TransferFundController.cs" />
+    <Compile Include="Api\UtilityController.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="Configurations.cs" />
+    <Compile Include="Config\FilterConfig.cs" />
+    <Compile Include="Config\RouteConfig.cs" />
+    <Compile Include="Config\WebApiConfig.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="CustomRestClient.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="Dtos\Account\AuthenticatedResponse.cs" />
+    <Compile Include="Dtos\Account\CancelDepositLimitResponse.cs" />
+    <Compile Include="Dtos\Account\ChangePasswordRequest.cs" />
+    <Compile Include="Dtos\Account\ChangePasswordResponse.cs" />
+    <Compile Include="Dtos\Account\ConfirmDepositLimitResponse.cs" />
+    <Compile Include="Dtos\Account\GetDepositLimitResponse.cs" />
+    <Compile Include="Dtos\Account\GetMyDetailsResponse.cs" />
+    <Compile Include="Dtos\Account\GetRealityCheckTimeResponse.cs" />
+    <Compile Include="Dtos\Account\LogInRequest.cs" />
+    <Compile Include="Dtos\Account\LogInResponse.cs" />
+    <Compile Include="Dtos\Account\LogOutResponse.cs" />
+    <Compile Include="Dtos\Account\PlayerInfoExists.cs" />
+    <Compile Include="Dtos\Account\RealityCheckTimeDto.cs" />
+    <Compile Include="Dtos\Account\ResetPasswordRequest.cs" />
+    <Compile Include="Dtos\Account\ResetPasswordResponse.cs" />
+    <Compile Include="Dtos\Account\SelfExcludeRequest.cs" />
+    <Compile Include="Dtos\Account\SelfExcludeResponse.cs" />
+    <Compile Include="Dtos\Account\SetDepositLimitRequest.cs" />
+    <Compile Include="Dtos\Account\SetDepositLimitResponse.cs" />
+    <Compile Include="Dtos\Account\SignUpRequest.cs" />
+    <Compile Include="Dtos\Account\SignUpResponse.cs" />
+    <Compile Include="Dtos\Account\UserModel.cs" />
+    <Compile Include="Dtos\Announcement\AnnouncementModel.cs" />
+    <Compile Include="Dtos\Announcement\GetLatestAnnouncementResponse.cs" />
+    <Compile Include="Dtos\Announcement\GetMobileAnnouncementsResponse.cs" />
+    <Compile Include="Dtos\ApiResponse.cs" />
+    <Compile Include="Dtos\Banner\BannerModel.cs" />
+    <Compile Include="Dtos\Banner\GetBannersResponse.cs" />
+    <Compile Include="Dtos\Casino\Amaya\AmayaGameModel.cs" />
+    <Compile Include="Dtos\Casino\Amaya\GetAmayaGamesResponse.cs" />
+    <Compile Include="Dtos\Casino\Amaya\GetAmayaGamesUrlResponse.cs" />
+    <Compile Include="Dtos\Casino\CanUseProductResponse.cs" />
+    <Compile Include="Dtos\Casino\CasinoGameModel.cs" />
+    <Compile Include="Dtos\Casino\FiftyFifty\FiftyFiftyGameModel.cs" />
+    <Compile Include="Dtos\Casino\FiftyFifty\Get5050ProGamesResponse.cs" />
+    <Compile Include="Dtos\Casino\FiftyFifty\Get5050ProGameUrlResponse.cs" />
+    <Compile Include="Dtos\Casino\FiftyFifty\Get5050ScratchCardGamesResponse.cs" />
+    <Compile Include="Dtos\Casino\FiftyFifty\Get5050ScratchCardGameUrlResponse.cs" />
+    <Compile Include="Dtos\Casino\FiftyFifty\Get5050SportsGamesResponse.cs" />
+    <Compile Include="Dtos\Casino\FiftyFifty\Get5050SportsGameUrlResponse.cs" />
+    <Compile Include="Dtos\Casino\FiftyFifty\Get5050SportsMiniGameUrlResponse.cs" />
+    <Compile Include="Dtos\Casino\GameHistoryModel.cs" />
+    <Compile Include="Dtos\Casino\GetCasinoGamesResponse.cs" />
+    <Compile Include="Dtos\Casino\GetGameHistoryResponse.cs" />
+    <Compile Include="Dtos\Casino\GetGamesResponse.cs" />
+    <Compile Include="Dtos\Casino\GetGamesRtpResponse.cs" />
+    <Compile Include="Dtos\Casino\MultiSlot\GetMultiSlotFreeGameUrlResponse.cs" />
+    <Compile Include="Dtos\Casino\MultiSlot\GetMultiSlotGamesResponse.cs" />
+    <Compile Include="Dtos\Casino\MultiSlot\GetMultiSlotMobileGamesResponse.cs" />
+    <Compile Include="Dtos\Casino\MultiSlot\GetMultiSlotRealGameUrlResponse.cs" />
+    <Compile Include="Dtos\Casino\MultiSlot\MultiSlotGameModel.cs" />
+    <Compile Include="Dtos\Casino\MultiSlot\MultiSlotGameUrlModel.cs" />
+    <Compile Include="Dtos\Casino\GameEnums.cs" />
+    <Compile Include="Dtos\Casino\QuickFire\GetQuickFireGamesResponse.cs" />
+    <Compile Include="Dtos\Casino\QuickFire\GetQuickFireGameUrlResponse.cs" />
+    <Compile Include="Dtos\Casino\QuickFire\QuickFireGameModel.cs" />
+    <Compile Include="Dtos\Casino\TGP\GetTGPGameUrlResponse.cs" />
+    <Compile Include="Dtos\FinancialBetting\GetSpotOptionUrlResponse.cs" />
+    <Compile Include="Dtos\Game\GameDto.cs" />
+    <Compile Include="Dtos\LiveCasino\Amaya\GetEmeraldRoomUrlResponse.cs" />
+    <Compile Include="Dtos\LiveCasino\Amaya\GetGoldRoomUrlResponse.cs" />
+    <Compile Include="Dtos\LiveCasino\GoldDeluxe\GetGoldDeluxeLiveDealerUrlResponse.cs" />
+    <Compile Include="Dtos\LiveCasino\QuickFire\GetQuickFireLiveDealerGameListResponse.cs" />
+    <Compile Include="Dtos\LiveCasino\QuickFire\GetQuickFireLiveDealerUrlResponse.cs" />
+    <Compile Include="Dtos\LiveCasino\QuickFire\QuickFireLiveDealerGameModel.cs" />
+    <Compile Include="Dtos\Sportsbook\GetSbTechMobileMappingRequest.cs" />
+    <Compile Include="Dtos\Sportsbook\GetSbTechMobileMappingResponse.cs" />
+    <Compile Include="Dtos\Utility\AddressModel.cs" />
+    <Compile Include="Dtos\Utility\AddressUsageModel.cs" />
+    <Compile Include="Dtos\Utility\CountryInfoModel.cs" />
+    <Compile Include="Dtos\Utility\CountryInfoResponse.cs" />
+    <Compile Include="Dtos\Utility\CountryRawModel.cs" />
+    <Compile Include="Dtos\Utility\CountryRawResponse.cs" />
+    <Compile Include="Dtos\Utility\GetAddressUsageResponse.cs" />
+    <Compile Include="Dtos\Utility\GetAddressResponse.cs" />
+    <Compile Include="Dtos\Utility\GetServerTimeResponse.cs" />
+    <Compile Include="Dtos\Utility\GetProgressiveTickersResponse.cs" />
+    <Compile Include="Dtos\Utility\NationalityModel.cs" />
+    <Compile Include="Dtos\Utility\NationalityResponse.cs" />
+    <Compile Include="Dtos\News\NewsDto.cs" />
+    <Compile Include="Dtos\Payment\PaymentDto.cs" />
+    <Compile Include="Dtos\Payment\PaymentDto.Neteller.cs" />
+    <Compile Include="Dtos\Payment\PaymentDto.Raven.cs" />
+    <Compile Include="Dtos\Payment\PaymentDto.Skrill.cs" />
+    <Compile Include="Dtos\Payment\PaymentDto.Ukash.cs" />
+    <Compile Include="Dtos\Payment\PaymentDto.WorldPay.cs" />
+    <Compile Include="Dtos\Payment\PaymentModel.cs" />
+    <Compile Include="Dtos\Product\BonusAndBettingBalancesModel.cs" />
+    <Compile Include="Dtos\Product\BonusHistoryModel.cs" />
+    <Compile Include="Dtos\Product\ClaimBonusResponse.cs" />
+    <Compile Include="Dtos\Product\GetAvailableBalanceResponse.cs" />
+    <Compile Include="Dtos\Product\GetBettingBalanceResponse.cs" />
+    <Compile Include="Dtos\Product\GetBonusAndBettingBalancesResponse.cs" />
+    <Compile Include="Dtos\Product\GetBonusBalanceResponse.cs" />
+    <Compile Include="Dtos\Product\GetBonusHistoryResponse.cs" />
+    <Compile Include="Dtos\Product\GetWalletBalanceResponse.cs" />
+    <Compile Include="Dtos\Promotion\GetPromotionResponse.cs" />
+    <Compile Include="Dtos\Promotion\GetPromotionsResponse.cs" />
+    <Compile Include="Dtos\Promotion\PromotionModel.cs" />
+    <Compile Include="Dtos\Sportsbook\GetSbTechMobileUrlResponse.cs" />
+    <Compile Include="Dtos\Sportsbook\GetSbTechUrlResponse.cs" />
+    <Compile Include="Dtos\TermsAndConditions\AcceptTermsAndConditionsResponse.cs" />
+    <Compile Include="Dtos\TermsAndConditions\HasReadTermsAndConditionsResponse.cs" />
+    <Compile Include="Dtos\TransferFund\GetMainWalletHistoryResponse.cs" />
+    <Compile Include="Dtos\TransferFund\GetMicroGamingWalletHistoryResponse.cs" />
+    <Compile Include="Dtos\TransferFund\TransferFromMainWalletToResponse.cs" />
+    <Compile Include="Dtos\TransferFund\TransferHistoryModel.cs" />
+    <Compile Include="Dtos\TransferFund\TransferToMainWalletFromResponse.cs" />
+    <Compile Include="Dtos\Utility\BannerModel.cs" />
+    <Compile Include="Dtos\Utility\BannerResponse.cs" />
+    <Compile Include="Dtos\Utility\CountriesModel.cs" />
+    <Compile Include="Dtos\Utility\CurrenciesModel.cs" />
+    <Compile Include="Dtos\Utility\GetCountriesResponse.cs" />
+    <Compile Include="Dtos\Utility\GetCurrenciesResponse.cs" />
+    <Compile Include="Dtos\Utility\GetDecimalConversionResponse.cs" />
+    <Compile Include="Dtos\Utility\GetSubscriptionReponse.cs" />
+    <Compile Include="Dtos\Utility\ProgressiveTickers.cs" />
+    <Compile Include="Dtos\Utility\ReferFriendRequest.cs" />
+    <Compile Include="Dtos\Utility\ReferFriendResponse.cs" />
+    <Compile Include="Dtos\Utility\SendQueryRequest.cs" />
+    <Compile Include="Dtos\Utility\SendQueryResponse.cs" />
+    <Compile Include="Dtos\Utility\SetSubscriptionResponse.cs" />
+    <Compile Include="Exceptions\SingleLoginSessionException.cs" />
+    <Compile Include="Filters\AntiForgeryTokenAttribute.cs" />
+    <Compile Include="Filters\HandleExceptionAttribute.cs" />
+    <Compile Include="Filters\LogUserAgentAttribute.cs" />
+    <Compile Include="Filters\NotSupportedAttribute.cs" />
+    <Compile Include="Filters\SuppressCsrfProtectionAttribute.cs" />
+    <Compile Include="Filters\ValidateAuthenticityAttribute.cs" />
+    <Compile Include="Filters\ValidateNullRequestAttribute.cs" />
+    <Compile Include="Filters\ValidateProductAttribute.cs" />
+    <Compile Include="Filters\ValidateSingleLoginAttribute.cs" />
+    <Compile Include="FormsAuthentication.cs" />
+    <Compile Include="Handlers\IOvationDynamicJs.cs" />
+    <Compile Include="Handlers\LogRequestAndResponseHandler.cs" />
+    <Compile Include="Handlers\SbtechJsHandler.cs" />
+    <Compile Include="Handlers\SetupJsHandler.cs" />
+    <Compile Include="Helper\BTagTracker.cs" />
+    <Compile Include="Helper\CacheHelper.cs" />
+    <Compile Include="Helper\CasinoHelper.cs" />
+    <Compile Include="Helper\CmsHelper.cs" />
+    <Compile Include="Integration\MyDetails.cs" />
+    <Compile Include="Integration\Player.cs" />
+    <Compile Include="JsonDotNetDeserializer.cs" />
+    <Compile Include="LoggedInUser.cs" />
+    <Compile Include="LoggingInterceptionBehavior.cs" />
+    <Compile Include="MvcApplication.cs" />
+    <Compile Include="OureaSessionIdentity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserContext.cs" />
+    <Compile Include="Utils\BrowserUtility.cs" />
+    <Compile Include="Utils\Constants.cs" />
+    <Compile Include="Utils\CultureUtility.cs" />
+    <Compile Include="Utils\CurrencyUtility.cs" />
+    <Compile Include="Utils\NetworkUtility.cs" />
+    <Compile Include="Utils\ProductMapping.cs" />
+    <Compile Include="Utils\XmlParser.cs" />
+    <Compile Include="WebViewPage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

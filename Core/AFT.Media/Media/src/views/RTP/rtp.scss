@@ -1,0 +1,27 @@
+#rtpContainer {
+  table {
+    width: 100%;
+  }
+
+  th {
+    padding: 5px 15px;
+    font-weight: bold;
+    text-align: left;
+    &:last-child {
+      text-align: center;
+    }
+  }
+
+  tr {
+    td {
+      padding: 5px 15px;
+      &:last-child {
+        text-align: center;
+      }
+    }
+  }
+
+  img {
+    width: 100px;
+  }
+}

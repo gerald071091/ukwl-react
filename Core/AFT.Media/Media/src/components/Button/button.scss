@@ -1,0 +1,73 @@
+@import '~config/_colors.scss';
+
+
+.btn {
+	border-radius: 2px !important;
+	color: $white;
+	display: block;
+	font-family: 'Bold';
+	font-size: 16px !important;
+	line-height: 100%;
+	margin: 0 auto;
+	text-transform: uppercase;
+	width: 100%;
+	white-space: normal;
+
+	&:hover {
+		color: $white;
+	}
+
+	&:focus {
+		outline: none !important;
+	}
+}
+
+.btnGreen {
+	@extend .btn;
+	background-color: $key-lime-pie;
+
+	&:active,
+	&:focus,
+	&:hover {
+		background-color: $shakespeare;
+		color: $black !important;
+	}
+}
+
+.btnRed {
+	@extend .btn;
+	background-color: $alizarin-crimson;
+
+	&:active,
+	&:focus,
+	&:hover {
+		background-color: $key-lime-pie;
+		color: $black;
+	}
+}
+
+.btnBlue {
+	@extend .btn;
+	background-color: $shakespeare;
+	color: $black;
+
+	&:active,
+	&:focus,
+	&:hover {
+		background-color: $key-lime-pie;
+		color: $black;
+	}
+}
+
+.btnWhite {
+	@extend .btn;
+	background-color: $white;
+	color: $black;
+
+	&:active,
+	&:focus,
+	&:hover {
+		background-color: $abbey;
+		color: $white !important;
+	}
+}

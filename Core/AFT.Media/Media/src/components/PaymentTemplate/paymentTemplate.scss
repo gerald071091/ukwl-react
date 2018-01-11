@@ -1,0 +1,33 @@
+@import '~config/_colors.scss';
+
+.payment {
+	overflow: hidden;
+
+	input[type='radio']{
+		float: left;
+		margin: 15px 30px;
+		width: 12px;
+
+		&:focus {
+			border: none;
+			box-shadow: none;
+		}
+	}
+
+	.imageHolder {
+		float: left;
+		min-height: 100px;
+		width: 200px;
+	}
+
+	.details {
+		float: left;
+		font-size: 16px;
+		margin-top: 20px;
+		width: 560px;
+	}
+
+	.oneTap {
+		margin-top: 20px;
+	}
+}

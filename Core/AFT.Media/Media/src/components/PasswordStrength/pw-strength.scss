@@ -1,0 +1,33 @@
+/**
+ * Created by gian.jamisola on 5/11/2017.
+ */
+
+
+@import '~config/_colors.scss';
+
+.strength0 {
+  background-color: $abbey !important;
+  color: $black !important;
+}
+
+.strength1 {
+  background-color: $thunderbird !important;;
+}
+
+.strength2 {
+  background-color: $crusta !important;;
+}
+
+.strength3 {
+  background-color: $key-lime-pie !important;;
+}
+
+.text {
+  font-size: 14px;
+  left: 0;
+  position: absolute;
+  //text-shadow: 1px 1px 2px $outer-space;
+  top: -1px;
+  width: 100%;
+
+}

@@ -1,0 +1,29 @@
+/**
+ * Created by gian.jamisola on 5/31/2017.
+ */
+
+.btnContainer {
+  position: relative;
+  bottom: 1em;
+
+    > button {
+      margin-left: 0.5em;
+    }
+}
+
+.wpInputWidth {
+  width: 50px !important;
+}
+
+.wpWidthAuto {
+  width: auto !important;
+}
+
+.expDateSeparator {
+  height: 34px;
+  line-height: 34px;
+}
+
+.wpSelectWidth {
+  width: 175px !important;
+}

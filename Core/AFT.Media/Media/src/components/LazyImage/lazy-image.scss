@@ -1,0 +1,10 @@
+@import '../../config/mixins';
+
+.img {
+	@include opacity(1);
+	@include transition(opacity 1s);
+}
+
+.imgHidden {
+	@include opacity(0);
+}

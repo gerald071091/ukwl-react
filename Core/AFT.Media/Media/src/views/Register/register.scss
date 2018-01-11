@@ -1,0 +1,74 @@
+@import '~config/_colors';
+
+.addTop {
+	top: -20px;
+
+	a:hover, a:focus {
+		color: $key-lime-pie;
+		text-decoration: none;
+	}
+}
+
+.accountForm {
+	background-color: #202020;
+	margin-bottom: 10px;
+	overflow: auto;
+
+	> div {
+		padding: 0 !important;
+	}
+
+	> div:nth-child(1) {
+		border-right: 10px solid #2a2a2a;
+	}
+
+	button {
+		height: 42px;
+		width: 100px;
+	}
+}
+
+.declaP {
+	display: inline-block;
+}
+
+.formGroup {
+	padding: 5px !important;
+	margin-bottom: 15px;
+}
+
+.icon {
+	top: 33px;
+	img {
+		height: 34px;
+	}
+}
+
+//.mainTitle {
+//  font-size: 24px;
+//  font-family: 'Bold';
+//  margin: 0 !important;
+//  text-transform: uppercase;
+//}
+
+.registerPage {
+	h4 {
+		font-family: 'Bold';
+		font-size: 18px;
+		letter-spacing: 1px;
+	}
+}
+
+.searchPostButton {
+	top: 40px;
+	cursor: pointer;
+
+	i:hover {
+		color: $alizarin-crimson;
+	}
+}
+
+.selectDiv {
+	margin-top: -25px;
+}
+

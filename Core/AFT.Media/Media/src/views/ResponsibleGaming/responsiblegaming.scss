@@ -1,0 +1,38 @@
+@import '~config/_colors.scss';
+
+#responsibleGamingContainer {
+
+}
+
+.clearfix {
+  clear: both;
+}
+
+.formGroup {
+  clear: both;
+  padding: 5px !important;
+  margin-bottom: 15px;
+}
+
+.removePadding {
+  padding: 0 !important;
+}
+
+.adjustMarginRight {
+  margin-right: 1em;
+}
+
+.compulsiveGambler {
+  display: none !important;
+}
+
+.cgError {
+  color: $thunderbird;
+  display: inline-block !important;
+}
+
+#brandlistContainer {
+  > div {
+    margin-bottom: 1em;
+  }
+}

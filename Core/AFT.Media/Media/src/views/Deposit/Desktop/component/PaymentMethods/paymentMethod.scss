@@ -1,0 +1,40 @@
+@import '~config/_colors.scss';
+
+.methodHolder {
+	.details {
+		background: $alizarin-crimson;
+		color: $white;
+		font-weight: bold;
+		margin-bottom: 45px;
+		padding: 10px 25px;
+		text-transform: uppercase;
+	}
+
+	margin-bottom: 10px;
+}
+
+.clear {
+	clear: both;
+}
+
+.nextBtn {
+	background: $shakespeare;
+	border-radius: 5px;
+	float: right;
+	margin-right: 15px;
+	padding: 5px 15px;
+
+	a {
+		color: $black;
+		font-weight: bold;
+	}
+
+	&:hover {
+		background: $key-lime-pie;
+
+		a {
+			color: $black;
+		}
+	}
+}
+

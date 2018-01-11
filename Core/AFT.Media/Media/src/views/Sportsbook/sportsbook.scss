@@ -1,0 +1,26 @@
+@import '~config/_colors.scss';
+
+#sportsbook {
+  width: 1200px;
+  margin: 0 auto;
+  position:relative;
+
+    .row {
+      padding: 0;
+      background: white;
+    }
+}
+
+.bannerToggle {
+  height: 216px;
+}
+
+.toggleBanner {
+  background-color: $alizarin-crimson;
+  height: 20px;
+  text-align: center;
+
+  span {
+    color: $black;
+  }
+}

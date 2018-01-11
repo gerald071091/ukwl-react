@@ -1,0 +1,14 @@
+#dpLimitContainer {
+  div[class^='col-xs'],div[class*='col-xs'], strong[class^='col-xs'] {
+    padding: 0 !important;
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+.clearfixDPLimit {
+  clear: both;
+  margin-bottom: 1em;
+}
